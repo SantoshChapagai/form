@@ -1,23 +1,24 @@
 import React from 'react';
 
-const Modal = () => {
+const Modal = (props) => {
+  console.log(props);
   return (
     <div className='modal_container'>
       <h2>This your input</h2>
       <div>
-        <p>First name:</p>
+        <p>First name: <span>{props.firstname}</span></p>
       </div>
       <div>
-        <p>Last name:</p>
+        <p>Last name: <span>{props.lastname}</span></p>
       </div>
       <div>
-        <p>Phone:</p>
+        <p>Phone: <span>{props.phone}</span></p>
       </div>
       <div>
-        <p>Role:</p>
+        <p>Role: <span>{props.role}</span></p>
       </div>
       <div>
-        <p>Message:</p>
+        <p>Message: <span>{props.message}</span></p>
       </div>
       <div className='btn'>
         <button>Send message</button>

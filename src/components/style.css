@@ -9,6 +9,8 @@ form div {
   color: white;
 }
 
+
+
 input,
 select {
   max-width: 15rem;
@@ -33,12 +35,12 @@ button {
   background-color: white;
   margin: 5rem;
   width: 30rem;
+  position: relative;
 
 }
 
 .box {
   border: 0.5px solid black;
-
 }
 
 .box p {
