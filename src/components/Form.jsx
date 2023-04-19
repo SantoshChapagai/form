@@ -2,24 +2,29 @@ import React from 'react';
 import './style.css';
 
 const Form = (props) => {
+  const inputChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    props.onChange(name, value);
+  }
   return (
     <div className='form_container'>
       <form onSubmit={props.submit}>
         <div>
           <label for='fname'>First name</label>
-          <input type='text' name='firstname' id='fname' />
+          <input type='text' name='firstname' id='fname' onChange={inputChange} />
         </div>
         <div>
           <label for='lname'>Last name</label>
-          <input type='text' name='lastname' id='lname' />
+          <input type='text' name='lastname' id='lname' onChange={inputChange} />
         </div>
         <div>
           <label for='phone'>Phone</label>
-          <input type='number' name='phone' id='phone' />
+          <input type='number' name='phone' id='phone' onChange={inputChange} />
         </div>
         <div>
           <label for='role'>Role</label>
-          <select>
+          <select name="role" onChange={inputChange}>
             <option default>Choose</option>
             <option value='teacher'>Teacher</option>
             <option value='student'>Student</option>
@@ -28,7 +33,7 @@ const Form = (props) => {
         </div>
         <div>
           <label for='text'>Message</label>
-          <textarea name="message" id="text" />
+          <textarea name="message" id="text" onChange={inputChange} />
         </div>
         <div>
           <button type='submit' value='submit' name='submit'>Submit</button>
