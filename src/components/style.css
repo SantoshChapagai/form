@@ -48,12 +48,26 @@ button {
   border-left: 1px solid red;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+
 .modal_container {
   background-color: white;
-  height: 20rem;
-  width: 15rem;
-  padding: 1rem;
-  margin-top: 2rem;
+  color: #333;
+  min-height: 40%;
+  width: 40%;
+  border-radius: 5px;
+  padding: 2rem;
   position: relative;
 }
 

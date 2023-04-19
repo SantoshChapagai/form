@@ -42,7 +42,14 @@ class App extends Component {
           />
         </div>
         <div>
-          {this.state.showModal && <Modal click={this.modalHandler} />}
+          {this.state.showModal && <Modal
+            click={this.modalHandler}
+            firstname={this.state.firstname}
+            lastname={this.state.lastname}
+            phone={this.state.phone}
+            role={this.state.role}
+            message={this.state.message}
+          />}
 
         </div>
 
