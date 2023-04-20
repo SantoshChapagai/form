@@ -2,29 +2,24 @@ import React from 'react';
 import './style.css';
 
 const Form = (props) => {
-  const inputChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    props.onChange(name, value);
-  }
   return (
     <div className='form_container'>
-      <form onSubmit={props.submit}>
+      <form onSubmit={props.submit} onChange={props.inputChangeHandler}>
         <div>
-          <label for='fname'>First name</label>
-          <input type='text' name='firstname' id='fname' onChange={inputChange} />
+          <label htmlFor='fname'>First name</label>
+          <input type='text' name='firstname' id='fname' />
         </div>
         <div>
-          <label for='lname'>Last name</label>
-          <input type='text' name='lastname' id='lname' onChange={inputChange} />
+          <label htmlFor='lname'>Last name</label>
+          <input type='text' name='lastname' id='lname' />
         </div>
         <div>
-          <label for='phone'>Phone</label>
-          <input type='number' name='phone' id='phone' onChange={inputChange} />
+          <label htmlFor='phone'>Phone</label>
+          <input type='number' name='phone' id='phone' />
         </div>
         <div>
-          <label for='role'>Role</label>
-          <select name="role" onChange={inputChange}>
+          <label htmlFor='role'>Role</label>
+          <select name="role" id='role'>
             <option default>Choose</option>
             <option value='teacher'>Teacher</option>
             <option value='student'>Student</option>
@@ -32,8 +27,8 @@ const Form = (props) => {
           </select>
         </div>
         <div>
-          <label for='text'>Message</label>
-          <textarea name="message" id="text" onChange={inputChange} />
+          <label htmlFor='text'>Message</label>
+          <textarea name="message" id="text" maxLength={1000} />
         </div>
         <div>
           <button type='submit' value='submit' name='submit'>Submit</button>

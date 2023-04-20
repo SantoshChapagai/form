@@ -3,15 +3,18 @@ import './app.css'
 import Form from './components/Form';
 import Display from './components/Display';
 import Modal from './components/Modal';
+import Footer from './components/Footer'
 
 class App extends Component {
   state = {
     showModal: false,
-    firstname: '',
-    lastname: '',
-    phone: '',
-    role: '',
-    message: ''
+    note: {
+      firstname: '',
+      lastname: '',
+      phone: '',
+      role: '',
+      message: ''
+    }
   }
   modalHandler = (e) => {
     e.preventDefault();
@@ -20,37 +23,37 @@ class App extends Component {
     });
 
   }
-  inputChangeHandler = (name, value) => {
+  inputChangeHandler = (e) => {
+    const name = e.target.name;
     this.setState({
-      [name]: value
+      note: {
+        ...this.state.note,
+        [name]: e.target.value
+      }
     });
 
   }
   render() {
     return (
       <div className="App">
-        <div>
-          <Form submit={this.modalHandler} onChange={this.inputChangeHandler} />
+        <div className='holder'>
+          <div>
+            <Form submit={this.modalHandler} inputChangeHandler={this.inputChangeHandler} />
+          </div>
+          <div>
+            <Display
+              {...this.state.note}
+            />
+          </div>
+          <div>
+            {this.state.showModal && <Modal
+              click={this.modalHandler}
+              {...this.state.note}
+            />}
+          </div>
         </div>
-        <div>
-          <Display
-            firstname={this.state.firstname}
-            lastname={this.state.lastname}
-            phone={this.state.phone}
-            role={this.state.role}
-            message={this.state.message}
-          />
-        </div>
-        <div>
-          {this.state.showModal && <Modal
-            click={this.modalHandler}
-            firstname={this.state.firstname}
-            lastname={this.state.lastname}
-            phone={this.state.phone}
-            role={this.state.role}
-            message={this.state.message}
-          />}
-
+        <div className='footer'>
+          <Footer />
         </div>
 
       </div>
