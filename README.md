@@ -6,7 +6,7 @@
 ## Run in your local machine
 - git clone https://github.com/SantoshChapagai/form
 - npm start
-
+- Open http://localhost:3000 to view it in your browser.
 
 ## Overview
 - Form that take name, phone number, role, and message as an input.
