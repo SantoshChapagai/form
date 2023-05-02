@@ -1,36 +1,12 @@
 {
   "posts": [
     {
-      "id": 1,
-      "firstname": "ssdsds",
-      "lastname": "sdsddfjjg",
-      "phone": "0000000",
-      "role": "student",
-      "message": "whatever"
-    },
-    {
-      "id": 2,
-      "firstname": "ssdsds",
-      "lastname": "sdsddfjjg",
-      "phone": "0000000",
-      "role": "student",
-      "message": "whatever"
-    },
-    {
-      "id": 3,
-      "firstname": "ssdsds",
-      "lastname": "sdsddfjjg",
-      "phone": "0000000",
-      "role": "student",
-      "message": "whatever"
-    },
-    {
-      "firstname": "santosh",
-      "lastname": "what",
-      "phone": "108748547",
-      "role": "student",
-      "message": "",
-      "id": 4
+      "firstname": "Rohit",
+      "lastname": "Poudel",
+      "phone": "0378356",
+      "role": "other",
+      "message": "Send the data",
+      "id": 1
     }
   ]
 }

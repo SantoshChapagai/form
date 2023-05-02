@@ -36,8 +36,7 @@ class App extends Component {
       .catch(error => {
         console.error(error);
       });
-  }
-  abortHandler = () => {
+
     this.setState({
       showModal: false,
       note: {
@@ -48,6 +47,11 @@ class App extends Component {
         message: '',
       },
       data: []
+    })
+  }
+  abortHandler = () => {
+    this.setState({
+      showModal: false
     })
   }
 
